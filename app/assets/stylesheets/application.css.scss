@@ -8,7 +8,9 @@ body{
   width: 100%;
   height: 100px;
 }
-
+.body-container{
+  margin-top: 8%;
+}
 .login-container{
   background-color: darkblue;
   margin-top: 8%;
@@ -18,4 +20,7 @@ body{
   background-color: blue;
   color: white;
   margin-top: 7%;
+}
+.alert {
+  margin-top: 8%;
 }
