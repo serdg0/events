@@ -1,12 +1,12 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
     <%= link_to "sample app", root_path, id: "logo" %>
-    <% user_available %>
+    <%= user_available %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home",    root_path %></li>
-        <li><%= link_to "Log in", login_path %></li>
-        <li><%= link_to "Sign Up", signup_path %></li>
+        <li> <%= logged_view %></li>
+        <li><%= logged_post %></li>
+        <li><%= logged_profile %></li>
       </ul>
     </nav>
   </div>

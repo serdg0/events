@@ -21,14 +21,31 @@ module SessionsHelper
   def user_available
     if logged_in?
       current_user.name
-    else
-      signup_path
-      logout_path
     end
   end
 
   def logged_view
-    #if-else del header
+    if logged_in?
+      link_to 'Log out', logout_path, method: :delete
+    else
+      link_to 'Login', login_path
+    end
+  end
+
+  def logged_post
+    if logged_in?
+      link_to 'Create Post', new_event_path
+    else
+      link_to 'Sign Up', signup_path
+    end
+  end
+
+  def logged_profile
+    if logged_in?
+      link_to 'Users', users_path
+    else
+      link_to 'Home', root_path
+    end
   end
 
 end

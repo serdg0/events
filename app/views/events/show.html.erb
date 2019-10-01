@@ -1,0 +1,6 @@
+<% provide(:title, @event.title) %>
+<h1>
+  <%= gravatar_for @user %>
+  <%= @event.title %><br>
+  <%= @user.name %>
+</h1>
