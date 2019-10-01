@@ -1,5 +1,19 @@
-<div class="home-container">
-  Welcome to our Events PLatform !!!
+<div class="container">
+  <section id="welcome-container">
+      <h1>Welcome to Agendator, a proof of concept Ruby on Rails app where the users can: </h1>
+    <br>
+    <ul>
+      <li>Sign up</li>
+      <li>Log in (only email required for simplicity)</li>
+      <li>Create events</li>
+      <li>Keep track of past and upcoming events</li>
+      <li>Only the creator, attending or invited users can see events</li>
+      <li>The creator of the event can invite other registered users</li>
+    </ul>
+    <br>
+    <p><%= link_to 'Create your own user',signup_path %>  or use the examples to <%= link_to 'Log in',login_path %> </p>
+  </section>
 
-  Here are going to be the place that you can create events and have attendess from all of the world
+
+  <div id="creators-container">Creators:  <h4><%= link_to 'MephistoDevelop','https://github.com/mephistodevelop' %></h4>  , <h4><%= link_to 'Sergio Diaz','https://github.com/serdg0' %></h4>  </div>
 </div>

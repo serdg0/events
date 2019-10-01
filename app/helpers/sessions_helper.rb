@@ -42,7 +42,7 @@ module SessionsHelper
 
   def logged_profile
     if logged_in?
-      link_to 'Users', users_path
+      link_to 'Dashboard', events_path
     else
       link_to 'Home', root_path
     end

@@ -1,3 +1,15 @@
+table,tr,td,th{
+  border: 1px solid red;
+  margin: 2px;
+  color: white;
+}
+tr{
+  align-text:center;
+}
+td,tr,th{
+  padding: 10px;
+  margin: 10px;
+}
 body{
   background-image: url('network');
   position: fixed;
@@ -23,4 +35,11 @@ body{
 }
 .alert {
   margin-top: 8%;
+}
+#welcome-container{
+  color:white;
+  text-align: left;
+}
+#creators-container a{
+  color: white;
 }

@@ -1,6 +1,22 @@
-<% provide(:title, @event.title) %>
-<h1>
-  <%= gravatar_for @user %>
-  <%= @event.title %><br>
-  <%= @user.name %>
-</h1>
+<table>
+  <th>Image</th>
+  <th>Title</th>
+  <th>Content</th>
+  <th>Location</th>
+  <th>Start</th>
+  <th>End</th>
+
+    <% @event.each do |item| %>
+      <tr>
+        <td><%= gravatar_for @user %></td>
+        <td><%= item.title %></td>
+        <td><%= item.content %></td>
+        <td><%= item.location %></td>
+        <td><%= item.start %></td>
+        <td><%= item.end %></td>
+      </tr>
+    <% end %>
+
+</table>
+
+<% provide(:title, @event) %>
