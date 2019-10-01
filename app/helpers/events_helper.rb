@@ -4,12 +4,14 @@ module EventsHelper
     arr=[]
 
   @users.each do |user|
-    arr << user.name
+    arr << user.email
   end
     return arr
   end
 
-  def fill_attendance
-
+  def add_user_to_event
+    @arr=[]
   end
+
+
 end

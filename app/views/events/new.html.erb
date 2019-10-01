@@ -20,10 +20,16 @@
       <%= f.label :location %>
       <%= f.text_field :location, class: 'form-control' %>
 
-        <%= f.select :location , options_for_select(get_users)  %>
-
       <%= f.submit "Create Event", class: "btn btn-primary" %>
     <% end %>
+    <select name="cmbx-users" id="cmbx-users">
+
+      <%= get_users.each do |item| %>
+          <option value="<%= item %>"> <%= item %> </option>
+      <% end %>
+    </select>
+    <input type="button" value="Invite user" onclick="<%= add_user_to_event %>">
+    <%= render 'shared/attendances_create' %>
   </div>
 </div>
 </div>
