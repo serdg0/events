@@ -1,6 +1,6 @@
 <% provide(:title, "New Event") %>
 <div class="login-container">
-  <h1>Create User</h1><div class="row">
+  <h1>Create Event</h1><div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(@event,url: new_event_path) do |f| %>
       <%= render 'shared/error_messages' %>
@@ -19,6 +19,8 @@
 
       <%= f.label :location %>
       <%= f.text_field :location, class: 'form-control' %>
+
+        <%= f.select :location , options_for_select(get_users)  %>
 
       <%= f.submit "Create Event", class: "btn btn-primary" %>
     <% end %>
