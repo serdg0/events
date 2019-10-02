@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'events#index'
   get 'events', to: 'events#show'
   get 'invitations', to: 'events#friends'
+  get '/event_created', to: 'attendances#new'
+  post '/event_created', to: 'attendances#create'
   resources :events, only: [:create, :destroy, :show]
   resources :users
   root 'users#index'
