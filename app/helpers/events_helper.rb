@@ -12,7 +12,7 @@ module EventsHelper
     @users = User.all
     arr=[]
     @users.each do |user|
-      arr << user.name
+      arr << user
     end
     return arr
   end

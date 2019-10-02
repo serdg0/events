@@ -2,7 +2,7 @@
  <h1> <%= @attendances  %></h1>
   <%= form_for(:attendance, url: event_created_path) do |f| %>
       <% get_users_name.each do |item| %>
-          <%= f.check_box ,{}, true, false %> <%= item %>
+          <%= f.check_box :email,{}, true, false %> <%= item.name %>
           <br />
       <% end %>
       <%= f.submit  "Invite", class: "btn btn-primary" %>
