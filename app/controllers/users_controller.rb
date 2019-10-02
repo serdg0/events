@@ -14,6 +14,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      UserMailer.with(user: @user).account_activation.deliver_later
       flash[:success] = "Welcome to the Sample App!"
       redirect_to @user
     else
