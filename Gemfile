@@ -10,7 +10,7 @@ end
 gem 'rails', '~> 5.1.6'
 gem 'bcrypt', '~> 3.1.7'
 gem 'jquery-rails'
-gem 'bootstrap-sass'
+gem "bootstrap-sass", ">= 3.4.1"
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
