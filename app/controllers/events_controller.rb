@@ -15,7 +15,7 @@ class EventsController < ApplicationController
     @user = current_user
     #@attendance = current_user.id
     @event = @user.events.new(event_params)
-    if @event.save && current_user && @attendance.save
+    if @event.save && current_user
       flash[:success] = "Event created!"
       redirect_to @event
     else
@@ -27,6 +27,10 @@ class EventsController < ApplicationController
   def show
     @event = current_user.events
     @user = current_user
+  end
+
+  def friends
+
   end
 
   private

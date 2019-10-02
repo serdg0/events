@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   post '/signup',  to: 'users#create'
   get '/new_event', to: 'events#new'
   post '/new_event', to: 'events#create'
+  get '/dashboard', to: 'events#index'
   get 'events', to: 'events#show'
+  get 'invitations', to: 'events#friends'
   resources :events, only: [:create, :destroy, :show]
   resources :users
   root 'users#index'
