@@ -1,12 +1,11 @@
-<div class="container">
-  <label for="">Select Event</label>
-  <select name="" id="">
-    <option value="example@mail.com">Metal Concert</option>
+<div class="attendance-form container">
+  <label for="">Select Event</label> <br>
+  <select>
+    <% get_events.each do |item| %>
+        <option value="<%= item %>"> <%= item %> </option>
+    <% end %>
   </select>
-  <label for="">Friends</label>
-  <select name="" id="">
-    <option value="example@mail.com">example@mail.com</option>
-  </select>
-  <searchbox></searchbox>
-  <input type="button" value="Invite Friend">
+  <br>
+  <label for="">Friends</label><br>
+  <%= render 'shared/users_to_invite' %>
 </div>

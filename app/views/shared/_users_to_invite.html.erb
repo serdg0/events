@@ -1,0 +1,10 @@
+<div class="container">
+ <h1> <%= @attendances  %></h1>
+  <%= form_for :attendance do |f| %>
+      <% get_users_name.each do |item| %>
+          <%= f.check_box :name,{}, true, false %> <%= item %>
+          <br />
+      <% end %>
+      <%= f.submit  "Invite", class: "btn btn-primary" %>
+  <% end %>
+</div>

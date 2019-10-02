@@ -30,7 +30,7 @@ class EventsController < ApplicationController
   end
 
   def friends
-
+    @users = User.all
   end
 
   private
