@@ -4,10 +4,14 @@ class AttendancesController < ApplicationController
   end
   def create
     @user = User.find(current_user.id)
-    @my= params[:attendance]
+    @checkbox_hash= params[:attendance]
     #@attendances = current_user.attendances
     #if @attendance.save
-      UserMailer.with(user: @user).invitation.deliver    #Crear attendance_mailer_controller
+    check_users_invite.each do |email|
+      UserMailer.with(email).invitation.deliver_later
+    end
+
+    #Crear attendance_mailer_controller
      # flash[:success] = "Invitations Send Sucessfully !"
       #redirect_to events_path
     #end

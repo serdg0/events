@@ -1,12 +1,12 @@
 module AttendancesHelper
-  def chek_users_invite
+  def check_users_invite
     arr=[]
-    @my.each do |key,value|
-     @v= value
+    @checkbox_hash.each do |key,value|
+     @mails_array= value
   end
-   @v.each do |x|
-     if x != ""
-       arr << x
+   @mails_array.each do |mail|
+     if mail != ""
+       arr << mail
      end
    end
   end
