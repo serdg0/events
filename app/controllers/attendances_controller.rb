@@ -7,7 +7,7 @@ class AttendancesController < ApplicationController
     @my= params[:attendance]
     #@attendances = current_user.attendances
     #if @attendance.save
-      UserMailer.with(user: @user).invitation.deliver_later   #Crear attendance_mailer_controller
+      UserMailer.with(user: @user).invitation.deliver    #Crear attendance_mailer_controller
      # flash[:success] = "Invitations Send Sucessfully !"
       #redirect_to events_path
     #end

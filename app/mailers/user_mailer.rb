@@ -8,6 +8,9 @@ class UserMailer < ApplicationMailer
   def invitation
     @user  = params[:user]
     @event = params[:event]
-    mail(to: @user.email, subject: "You've been invited to #{@event.title}!")
+    check_user_to_invite.each do |mails|
+      mail(to: mails, subject: "You've been invited to #{@event.title}!")
+    end
+
   end
 end
