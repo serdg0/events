@@ -4,6 +4,7 @@ class AttendancesController < ApplicationController
   end
   def create
     @user = User.find(current_user.id)
+    @my= params[:attendance]
     #@attendances = current_user.attendances
     #if @attendance.save
       UserMailer.with(user: @user).invitation.deliver_later   #Crear attendance_mailer_controller
