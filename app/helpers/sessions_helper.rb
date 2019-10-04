@@ -34,7 +34,7 @@ module SessionsHelper
 
   def logged_post
     if logged_in?
-      link_to 'Create Post', new_event_path
+      link_to 'Create Event', new_event_path
     else
       link_to 'Sign Up', signup_path
     end

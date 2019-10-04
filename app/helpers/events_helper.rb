@@ -21,7 +21,7 @@ module EventsHelper
     @events = Event.where(creator_id: current_user.id)
     arr=[]
     @events.each do |event|
-      arr << event.title
+      arr << event
     end
     return arr
   end

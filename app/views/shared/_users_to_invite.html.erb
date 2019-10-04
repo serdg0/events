@@ -1,8 +1,17 @@
 <div class="container">
- <h1> <%= @attendances  %></h1>
+ <h1>Current User:  <%= @user.name  %> ,<br>  ID: <%= @user.id  %> </h1>
+
   <%= form_for(:attendance, url: event_created_path) do |f| %>
+      <%= f.label :title,'Select Event' %>
+      <br>
+       <select name="select_list" id="select_list">
+        <% get_events.each do |item| %>
+            <option name="<%= item.id  %>" value="<%= item.id  %>"> <%= item.title %> </option>
+        <% end %>
+      </select>
+      <br>
       <% get_users_name.each do |item| %>
-          <%= f.check_box :tag_ids,{multiple:true},item.email,nil %> <%= item.name %>
+          <%= f.check_box :tag_ids,{multiple:true},item.email,''%> <%= item.name %>
           <br />
       <% end %>
       <%= f.submit  "Invite", class: "btn btn-primary" %>
