@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.find(current_user.id)
   end
 
   def create
@@ -17,6 +17,7 @@ class UsersController < ApplicationController
       flash[:success] = "Welcome to the Sample App!"
       redirect_to @user
     else
+      flash.now[:danger] = 'Not a valid user. Try again.'
       render 'new'
     end
   end

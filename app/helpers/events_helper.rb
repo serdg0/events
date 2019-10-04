@@ -29,4 +29,12 @@ module EventsHelper
   def add_user_to_event
     @arr=[]
   end
+
+  def show_events
+    if current_user.events.any?
+      render 'shared/show_events'
+    else
+      "You don't host any event!"
+    end
+  end
 end

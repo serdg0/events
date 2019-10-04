@@ -1,6 +1,10 @@
 class EventsController < ApplicationController
 
   def index
+    @events = Event.all
+  end
+
+  def dashboard
     @users = User.all
     @events = Event.all
   end
@@ -17,7 +21,7 @@ class EventsController < ApplicationController
     @event = @user.events.new(event_params)
     if @event.save && current_user
       flash[:success] = "Event created!"
-      redirect_to @event
+      redirect_to event_path
     else
       flash.now[:danger] = 'Not a valid event'
       render 'new'
@@ -26,7 +30,6 @@ class EventsController < ApplicationController
 
   def show
     @event = current_user.events
-    @user = current_user
   end
 
   def friends
