@@ -11,7 +11,7 @@
       </select>
       <br>
       <% get_users_name.each do |item| %>
-          <%= f.check_box :tag_ids,{multiple:true},item,''%> <%= item %>
+          <%= f.check_box :tag_ids,{multiple:true},item.email ,''%> <%= item.name %>
           <br />
       <% end %>
       <%= f.submit  "Invite", class: "btn btn-primary" %>

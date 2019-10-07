@@ -14,7 +14,6 @@ module AttendancesHelper
        arr << mail
      end
    end
-    puts arr
   end
 
   def check_ids_invite
@@ -28,15 +27,15 @@ module AttendancesHelper
     end
     @ids_array=[] if @ids_array.nil?
     @ids_array.each do |id|
-      if id != '0'
+      if id != ''
         arr << id
       end
     end
-    puts @ids_array
-    puts arr
     arrid=[]
+    puts "Yo soy el uts fallando #{arr}"
     arr.each do |email|
-      u = User.find_by(name: email)
+
+      u = User.find_by(email: email )
       arrid << u.email
     end
     arrid
