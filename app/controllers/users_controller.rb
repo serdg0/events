@@ -15,6 +15,7 @@ class UsersController < ApplicationController
     if @user.save
       UserMailer.with(user: @user).account_activation.deliver_later
       flash[:success] = "Welcome to the Sample App!"
+      log_in(@user)
       redirect_to @user
     else
       flash.now[:danger] = 'Not a valid user. Try again.'

@@ -15,7 +15,13 @@
       <td><%= item.location %></td>
       <td><%= item.start %></td>
       <td><%= item.end %></td>
-      <td><%= item.attendees.name %></td>
+      <td>
+        <ul>
+          <% item.attendees.each do |invited| %>
+            <li><%= invited.name %></li>
+        <% end %>
+      </ul>
+      </td>
     </tr>
   <% end %>
 
