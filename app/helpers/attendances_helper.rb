@@ -14,6 +14,7 @@ module AttendancesHelper
        arr << mail
      end
    end
+    puts arr
   end
 
   def check_ids_invite
@@ -27,17 +28,18 @@ module AttendancesHelper
     end
     @ids_array=[] if @ids_array.nil?
     @ids_array.each do |id|
-      if id != ""
+      if id != '0'
         arr << id
       end
     end
+    puts @ids_array
+    puts arr
     arrid=[]
     arr.each do |email|
-      u = User.find_by(email: email)
-      arrid << u.id
+      u = User.find_by(name: email)
+      arrid << u.email
     end
-
-    return arrid
+    arrid
   end
 
   def check_event_invite

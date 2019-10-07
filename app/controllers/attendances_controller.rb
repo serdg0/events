@@ -10,7 +10,7 @@ class AttendancesController < ApplicationController
       #@attendance = Attendance.new(user_id:id,event_id: check_event_invite,invitation_sender: @user.id)
       @attendance = Event.find(check_event_invite)
       #@attendance  = Event.find(1)
-      @attendance.attendees << User.find(id)
+      @attendance.attendees << User.find_by(email: id)
       if @attendance.save
         flash[:success]= "Felicidades has invitado a tu amigo !!"
         # redirect_to invitations_path

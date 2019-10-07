@@ -1,10 +1,20 @@
 module EventsHelper
   def get_users
-    User.pluck(:email)
+    @users = User.all
+    arr=[]
+    @users.each do |user|
+      arr << user.email
+    end
+    return arr
   end
 
   def get_users_name
-    User.pluck(:name)
+    @users = User.all
+    arr=[]
+    @users.each do |user|
+      arr << user
+    end
+    return arr
   end
 
   def get_events
