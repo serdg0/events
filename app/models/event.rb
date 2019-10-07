@@ -3,8 +3,8 @@ class Event < ApplicationRecord
   has_many :attendances
   has_many :attendees, through: :attendances, source: 'user'
 
-  scope :past, -> { where("start > DateTime('now')") }
-  scope :upcoming, -> { where("start <= DateTime('now')") }
+  scope :past, -> { where("start <= DateTime('now')") }
+  scope :upcoming, -> { where("start > DateTime('now')") }
 
   validates :title, presence: true
   validates :content, presence:true

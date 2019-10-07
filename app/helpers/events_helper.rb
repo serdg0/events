@@ -1,20 +1,10 @@
 module EventsHelper
   def get_users
-    @users = User.all
-    arr=[]
-  @users.each do |user|
-    arr << user.email
-  end
-    return arr
+    User.pluck(:email)
   end
 
   def get_users_name
-    @users = User.all
-    arr=[]
-    @users.each do |user|
-      arr << user
-    end
-    return arr
+    User.pluck(:name)
   end
 
   def get_events
@@ -37,4 +27,21 @@ module EventsHelper
       "You don't host any event!"
     end
   end
+
+  def past_events
+    if current_user.attended_event.past.any?
+      render 'shared/past_events'
+    else
+      "You were never invited to an event."
+    end
+  end
+
+  def upcoming_events
+    if current_user.attended_event.upcoming.any?
+      render 'shared/upcoming_events'
+    else
+      "You don't have upcoming events."
+    end
+  end
 end
+

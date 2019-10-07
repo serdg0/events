@@ -1,1 +1,9 @@
-<%= show_events %>
+
+<input type="button" onclick=show_events value="Your events">
+<input type="button" onclick="<% past_events %>" value="Past events">
+<h1>Your Events</h1>
+<%= show_events %><br>
+<h1>Upcoming Events</h1>
+<%= upcoming_events %><br>
+<h1>Past Events</h1>
+<%= past_events %>

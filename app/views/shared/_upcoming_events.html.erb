@@ -1,0 +1,30 @@
+<table>
+  <th>Image</th>
+  <th>Title</th>
+  <th>Content</th>
+  <th>Location</th>
+  <th>Start</th>
+  <th>End</th>
+  <th>Invited Friends</th>
+
+  <% current_user.attended_event.upcoming.all.each do |item| %>
+    <tr>
+      <td><%= gravatar_for current_user %></td>
+      <td><%= item.title %></td>
+      <td><%= item.content %></td>
+      <td><%= item.location %></td>
+      <td><%= item.start %></td>
+      <td><%= item.end %></td>
+      <td>
+        <ul>
+          <% item.attendees.each do |invited| %>
+            <li><%= invited.name %></li>
+          <% end %>
+        </ul>
+      </td>
+    </tr>
+  <% end %>
+
+</table>
+
+<% provide(:title, @event) %>
