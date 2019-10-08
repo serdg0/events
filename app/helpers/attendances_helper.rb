@@ -16,6 +16,26 @@ module AttendancesHelper
    end
   end
 
+  def check_users
+    arr=[]
+    if @checkbox_hash.nil?
+      @checkbox_hash={}
+    else
+      @checkbox_hash.each do |key,value|
+        @mails_array= value
+      end
+    end
+    @mails_array=[] if @mails_array.nil?
+    @mails_array.each do |mail|
+      if mail != ""
+        user = User.find_by(email: mail)
+        arr << user
+      end
+    end
+
+    arr
+  end
+
   def check_ids_invite
     arr=[]
     if @checkbox_hash.nil?
@@ -48,5 +68,10 @@ module AttendancesHelper
     id =  @select_hash
     event=Event.find(id)
     return event
+  end
+
+  def invited?(user,event)
+    u=user
+    event.attendees.where(id: user.id).empty?
   end
 end

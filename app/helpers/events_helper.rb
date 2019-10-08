@@ -53,5 +53,8 @@ module EventsHelper
       "You don't have upcoming events."
     end
   end
+  def invited?(user)
+    !self.attendees.where(id: user.id).empty?
+  end
 end
 

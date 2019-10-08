@@ -1,3 +1,7 @@
+table{
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
 table,tr,td,th{
   border: 1px solid red;
   margin: 2px;
@@ -61,4 +65,14 @@ body{
   color:darkred;
   font-size: 28px;
   font-size: 800;
+}
+#logo{
+  font-size: 30px;
+  font-weight: 900;
+  text-decoration: none;
+  color: lightyellow;
+  position: fixed;
+}
+#logo:hover{
+  font-size: 32px;
 }
