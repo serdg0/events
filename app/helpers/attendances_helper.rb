@@ -71,7 +71,6 @@ module AttendancesHelper
   end
 
   def invited?(user,event)
-    u=user
     event.attendees.where(id: user.id).empty?
   end
 end
