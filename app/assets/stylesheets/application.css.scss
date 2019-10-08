@@ -33,7 +33,7 @@ body{
   margin-top: 8%;
 }
 .login-container{
-  background-color: darkblue;
+  background-color: rgba(100, 100, 255, 0.35);
   margin-top: 8%;
 }
 
@@ -61,9 +61,17 @@ body{
   font-size:28px;
 }
 .dashboard-container{
-  background-color: white;
+  background-color: rgba(100, 100, 255, 0.35);
   font-size: 28px;
   font-weight: 800;
+  text-align: center;
+}
+.dashboard-container a{
+  color:white;
+}
+.dashboard-container a:hover{
+  font-size: 32px;
+  color: lightyellow;
 }
 .attendance-form{
   color:darkred;
@@ -102,4 +110,9 @@ body{
 }
 .creators-name:hover{
   font-size: 28px;
+}
+.tittle-text{
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 900;
 }
