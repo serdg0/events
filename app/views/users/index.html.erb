@@ -1,10 +1,10 @@
-<div class="container">
+<div id="index" class="container">
   <section id="welcome-container">
       <h1>Welcome to Agendator, a proof of concept Ruby on Rails app where the users can: </h1>
     <br>
     <ul>
       <li>Sign up</li>
-      <li>Log in (only email required for simplicity)</li>
+      <li>Log in (only valid email required for simplicity)</li>
       <li>Create events</li>
       <li>Keep track of past and upcoming events</li>
       <li>Only the creator, attending or invited users can see events</li>
@@ -15,5 +15,5 @@
   </section>
 
 
-  <div id="creators-container">Creators:  <h4><%= link_to 'MephistoDevelop','https://github.com/mephistodevelop' %></h4>  , <h4><%= link_to 'Sergio Diaz','https://github.com/serdg0' %></h4>  </div>
+  <div id="creators-container">Creators:  <span class="creators-name"><%= link_to 'MephistoDevelop','https://github.com/mephistodevelop' %></span>  , <span class="creators-name" ><%= link_to 'Sergio Diaz','https://github.com/serdg0' %></span>  </div>
 </div>

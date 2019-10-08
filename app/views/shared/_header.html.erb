@@ -1,8 +1,9 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to "AGENDATOR", root_path, id: "logo" %>
-    <%= user_available %>
     <nav>
+      <div><%= link_to "AGENDATOR", root_path, id: "logo" %>
+        <p id="logo-name"><%= "Welcome: #{user_available}" if !user_available.nil? %></p>
+      </div>
       <ul class="nav navbar-nav navbar-right">
         <li> <%= logged_view %></li>
         <li><%= logged_post %></li>
