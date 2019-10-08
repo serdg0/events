@@ -15,9 +15,13 @@ td,tr,th{
   margin: 10px;
 }
 body{
-  background-image: url('network');
+  background-image: url("network");
   position: fixed;
   color: ghostwhite !important;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 .contenedor{
@@ -68,6 +72,7 @@ body{
 }
 #logo{
   font-size: 30px;
+  left: 30px;
   font-weight: 900;
   text-decoration: none;
   color: lightyellow;
@@ -75,4 +80,26 @@ body{
 }
 #logo:hover{
   font-size: 32px;
+}
+#logo-name{
+  color: lightyellow;
+  font-size: 18px;
+  margin-left: 13%;
+  position: fixed;
+  height: 40px;
+  align-items: flex-end;
+  display: flex;
+}
+#index{
+  background-color: rgba(100, 100, 255, 0.35);
+  height: 60vh;
+}
+.creators-name{
+  color: whitesmoke;
+  font-size: 16px;
+  font-weight: 900;
+  text-decoration: underline;
+}
+.creators-name:hover{
+  font-size: 28px;
 }
