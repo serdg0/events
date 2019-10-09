@@ -1,0 +1,10 @@
+<div class="users-container container text-center">
+  <br>
+  <div class="tittle-text">Register Users</div>
+  <ul id="users" class="text-left">
+    <% @users.each do |user| %>
+      <li><span class="d-text">Name:</span>  <%= user.name %> <br> <span class="d-text">Email:</span>  <%= user.email %></li>
+        <br>
+    <% end %>
+  </ul>
+</div>

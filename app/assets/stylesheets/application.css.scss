@@ -119,6 +119,7 @@ ul{
   text-transform: uppercase;
   text-align: center;
   font-weight: 900;
+  font-size: 25px;
 }
 .tabs-container{
   background-color: rgba(100, 100, 255, 0.35);
@@ -156,5 +157,22 @@ ul{
   background-color: rgba(100, 100, 255, 0.35);
   height: 500px;
   overflow-y: auto;
-
 }
+#users{
+  width: max-content;
+  position: relative;
+  margin-left: 41%;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.d-text{
+  color: greenyellow;
+}
+.users-container{
+    background-color: rgba(100, 100, 255, 0.35);
+    margin-top: 0%;
+    height:500px;
+    overflow-y: scroll;
+}
+

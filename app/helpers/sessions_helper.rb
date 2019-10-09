@@ -24,6 +24,10 @@ module SessionsHelper
     end
   end
 
+  def users_view
+    link_to 'Users', user_path
+  end
+
   def logged_view
     if logged_in?
       link_to 'Log out', logout_path, method: :delete
