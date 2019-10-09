@@ -10,7 +10,8 @@ class UserMailerPreview < ActionMailer::Preview
 
   def invitation
     user = User.new(name: 'MephistoDevelop', email: 'inesherald@gmail.com')
-    event = Event.new(title: 'Rails Project', content: 'Simple Rails Project', start: '2019-10-18 09:09:00', end: '2019-07-06 03:33:00', location: 'Lagos de Moreno, Jalisco', creator_id: 6)
+    event = Event.new(title: 'Rails Project', content: 'Simple Rails Project', start: '2019-10-18 09:09:00',
+                      end: '2019-07-06 03:33:00', location: 'Lagos de Moreno, Jalisco', creator_id: 6)
     UserMailer.with(user: user, event: event).invitation
   end
 end
