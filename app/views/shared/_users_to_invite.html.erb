@@ -1,19 +1,24 @@
-<div class="container">
- <h1>Current User:  <%= @user.name  %> ,<br>  ID: <%= @user.id  %> </h1>
-
+<div id="f-friends" class="container">
+  <div class="tittle-text">INVITE FRIENDS</div>
   <%= form_for(:attendance, url: event_created_path) do |f| %>
       <%= f.label :title,'Select Event' %>
       <br>
-       <select name="select_list" id="select_list">
-        <% get_events.each do |item| %>
-            <option name="<%= item.id  %>" value="<%= item.id  %>"> <%= item.title %> </option>
-        <% end %>
-      </select>
+      <div id="selectbox">    <select name="select_list" id="select_list">
+          <% get_events.each do |item| %>
+              <option name="<%= item.id  %>" value="<%= item.id  %>"> <%= item.title %> </option>
+          <% end %>
+        </select>
+      </div>
       <br>
-      <% get_users_name.each do |item| %>
-          <%= f.check_box :tag_ids,{multiple:true},item.email ,''%> <%= item.name %>
-          <br />
-      <% end %>
+      <div class="d-flex flex-wrap container">
+
+          <% get_users_name.each do |item| %>
+            <div class="d-flex boxs">
+              <%= f.check_box :tag_ids,{multiple:true},item.email ,''%> <%= item.name %>
+            </div>
+          <% end %>
+
+      </div>
       <%= f.submit  "Invite", class: "btn btn-primary" %>
   <% end %>
 </div>

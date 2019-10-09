@@ -31,11 +31,11 @@ body{
   height: 100px;
 }
 .body-container{
-  margin-top: 8%;
+  margin-top: 6%;
 }
 .login-container{
   background-color: rgba(100, 100, 255, 0.35);
-  margin-top: 8%;
+  margin-top: 0%;
 }
 
 .home-container{
@@ -44,7 +44,7 @@ body{
   margin-top: 7%;
 }
 .alert {
-  margin-top: 8%;
+  margin-top: 2%;
 }
 #welcome-container{
   color:white;
@@ -138,4 +138,13 @@ body{
 }
 .card{
   margin: 0px 40px;
+}
+#f-friends{
+  color:ghostwhite;
+}
+#selectbox{
+  color:black;
+}
+.boxs{
+  width: max-content;
 }
