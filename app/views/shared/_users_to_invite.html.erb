@@ -4,7 +4,7 @@
       <%= f.label :title,'Select Event' %>
       <br>
       <div id="selectbox">    <select name="select_list" id="select_list">
-          <% get_events.each do |item| %>
+          <% retrieve_events.each do |item| %>
               <option name="<%= item.id  %>" value="<%= item.id  %>"> <%= item.title %> </option>
           <% end %>
         </select>
@@ -12,7 +12,7 @@
       <br>
       <div class="d-flex flex-wrap container">
 
-          <% get_users_name.each do |item| %>
+          <% retrieve_users_name.each do |item| %>
             <div class="d-flex boxs">
               <%= f.check_box :tag_ids,{multiple:true},item.email ,''%> <%= item.name %>
             </div>

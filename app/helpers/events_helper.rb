@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module EventsHelper
-  def get_users
+  def retrieve_users
     @users = User.all
     arr = []
     @users.each do |user|
@@ -10,7 +10,7 @@ module EventsHelper
     arr
   end
 
-  def get_users_name
+  def retrieve_users_name
     @users = User.all
     arr = []
     @users.each do |user|
@@ -19,7 +19,7 @@ module EventsHelper
     arr
   end
 
-  def get_events
+  def retrieve_events
     @events = Event.where(creator_id: current_user.id)
     arr = []
     @events.each do |event|
