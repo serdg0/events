@@ -19,7 +19,7 @@
                       <li><%= invited.name %></li>
                   <% end %>
                 </ul>
-                <a href="#" class="btn btn-primary">View Event</a>
+                <%= link_to "View Event", events_path(:e_id => item.id) ,class: "btn btn-primary" %>
               </div>
             </div>
       <% end %>
