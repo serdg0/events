@@ -1,33 +1,35 @@
+# frozen_string_literal: true
+
 module EventsHelper
   def get_users
     @users = User.all
-    arr=[]
+    arr = []
     @users.each do |user|
       arr << user.email
     end
-    return arr
+    arr
   end
 
   def get_users_name
     @users = User.all
-    arr=[]
+    arr = []
     @users.each do |user|
       arr << user
     end
-    return arr
+    arr
   end
 
   def get_events
     @events = Event.where(creator_id: current_user.id)
-    arr=[]
+    arr = []
     @events.each do |event|
       arr << event
     end
-    return arr
+    arr
   end
 
   def add_user_to_event
-    @arr=[]
+    @arr = []
   end
 
   def show_events
@@ -42,7 +44,7 @@ module EventsHelper
     if current_user.attended_event.past.any?
       render 'shared/past_events'
     else
-      "You were never invited to an event."
+      'You were never invited to an event.'
     end
   end
 
@@ -53,8 +55,8 @@ module EventsHelper
       "You don't have upcoming events."
     end
   end
+
   def invited?(user)
-    !self.attendees.where(id: user.id).empty?
+    !attendees.where(id: user.id).empty?
   end
 end
-

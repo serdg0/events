@@ -1,5 +1,6 @@
-class EventsController < ApplicationController
+# frozen_string_literal: true
 
+class EventsController < ApplicationController
   def index
     @event = Event.find(params[:e_id])
   end
@@ -17,10 +18,10 @@ class EventsController < ApplicationController
 
   def create
     @user = current_user
-    #@attendance = current_user.id
-    @event = @user.events.new(event_params)
+    # @attendance = current_user.id
+    @event = @user.events.build(event_params)
     if @event.save && current_user
-      flash[:success] = "Event created!"
+      flash[:success] = 'Event created!'
       redirect_to event_path
     else
       flash.now[:danger] = 'Not a valid event'
@@ -44,6 +45,6 @@ class EventsController < ApplicationController
   end
 
   def attendance_params
-    params.require(:attendance).permit(:user_id,:event_id,:invitation_sender)
+    params.require(:attendance).permit(:user_id, :event_id, :invitation_sender)
   end
 end

@@ -1,11 +1,14 @@
+# frozen_string_literal: true
+
 class UsersController < ApplicationController
   def index
-    @users=User.all
+    @users = User.all
   end
 
   def all
-    @users=User.all
+    @users = User.all
   end
+
   def new
     @user = User.new
   end
@@ -18,7 +21,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       UserMailer.with(user: @user).account_activation.deliver_later
-      flash[:success] = "Welcome to the Sample App!"
+      flash[:success] = 'Welcome to the Sample App!'
       log_in(@user)
       redirect_to @user
     else

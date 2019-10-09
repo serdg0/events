@@ -1,12 +1,12 @@
+# frozen_string_literal: true
+
 module SessionsHelper
   def log_in(user)
     session[:user_id] = user.id
   end
 
   def current_user
-    if session[:user_id]
-      @current_user ||= User.find_by(id: session[:user_id])
-    end
+    @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
   end
 
   def logged_in?
@@ -19,9 +19,7 @@ module SessionsHelper
   end
 
   def user_available
-    if logged_in?
-      current_user.name
-    end
+    current_user.name if logged_in?
   end
 
   def users_view
@@ -51,5 +49,4 @@ module SessionsHelper
       link_to 'Home', root_path
     end
   end
-
 end
