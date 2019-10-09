@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
 
   def index
-    @events = Event.all
+    @event = Event.find(params[:e_id])
   end
 
   def dashboard

@@ -24,6 +24,9 @@ body{
   background-size: cover;
 
 }
+ul{
+  padding: 0px 8px;
+}
 
 .contenedor{
   background-color: red;
@@ -135,6 +138,7 @@ body{
   overflow-x: scroll !important;
   height: 620px;
   margin:0px 20px;
+  justify-content: center;
 }
 .card{
   margin: 0px 40px;
@@ -147,4 +151,10 @@ body{
 }
 .boxs{
   width: max-content;
+}
+.event-container{
+  background-color: rgba(100, 100, 255, 0.35);
+  height: 500px;
+  overflow-y: auto;
+
 }
