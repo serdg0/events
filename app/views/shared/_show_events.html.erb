@@ -1,30 +1,28 @@
-<table>
-  <th>Image</th>
-  <th>Title</th>
-  <th>Content</th>
-  <th>Location</th>
-  <th>Start</th>
-  <th>End</th>
-  <th>Invited Friends</th>
-
+<div class="c-cards container ">
   <% @event.all.each do |item| %>
-    <tr>
-      <td><%= gravatar_for current_user %></td>
-      <td><%= item.title %></td>
-      <td><%= item.content %></td>
-      <td><%= item.location %></td>
-      <td><%= item.start %></td>
-      <td><%= item.end %></td>
-      <td>
-        <ul>
-          <% item.attendees.each do |invited| %>
-            <li><%= invited.name %></li>
-        <% end %>
-      </ul>
-      </td>
-    </tr>
+      <div class="card" style="width: 18rem;">
+        <div  class="card-img-top" > <%= gravatar_for current_user %></div>
+        <div class="card-body">
+          <p class="card-text-d">Event</p>
+          <h5 class="card-title">  <%= item.title %></h5>
+          <p class="card-text-d">Description</p>
+          <p class="card-text"><%= item.content %></p>
+          <p class="card-text-d">Location: </p>
+          <p class="card-text"><%= item.location %></p>
+          <p class="card-text-d">Start: </p>
+          <p class="card-text"><%= item.start %></p>
+          <p class="card-text-d">End: </p>
+          <p class="card-text"><%= item.end %></p>
+          <p class="card-text-d">Invited Friends: </p>
+          <ul>
+            <% item.attendees.each do |invited| %>
+                <li><%= invited.name %></li>
+            <% end %>
+          </ul>
+          <a href="#" class="btn btn-primary">View Event</a>
+        </div>
+      </div>
   <% end %>
+</div>
 
-</table>
 
-<% provide(:title, @event) %>

@@ -1,9 +1,10 @@
+
 table{
   overflow-x: scroll;
   overflow-y: scroll;
 }
 table,tr,td,th{
-  border: 1px solid red;
+  border: 2px solid darkred;
   margin: 2px;
   color: white;
 }
@@ -115,4 +116,23 @@ body{
   text-transform: uppercase;
   text-align: center;
   font-weight: 900;
+}
+.tabs-container{
+  background-color: rgba(100, 100, 255, 0.35);
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: auto;
+  height: 900px;
+}
+.card-text-d{
+  font-size: 18px;
+  font-weight: 900;
+  color: dodgerblue;
+}
+
+.c-cards{
+  display: flex;
+  overflow-x: scroll !important;
+  height: 620px;
+  margin:0px 20px;
 }
