@@ -1,6 +1,31 @@
+
+table{
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+table,tr,td,th{
+  border: 2px solid darkred;
+  margin: 2px;
+  color: white;
+}
+tr{
+  align-text:center;
+}
+td,tr,th{
+  padding: 10px;
+  margin: 10px;
+}
 body{
-  background-image: url('network');
+  background-image: url("network");
   position: fixed;
+  color: ghostwhite !important;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+ul{
+  padding: 0px 8px;
 }
 
 .contenedor{
@@ -8,10 +33,12 @@ body{
   width: 100%;
   height: 100px;
 }
-
+.body-container{
+  margin-top: 6%;
+}
 .login-container{
-  background-color: darkblue;
-  margin-top: 8%;
+  background-color: rgba(100, 100, 255, 0.35);
+  margin-top: 0%;
 }
 
 .home-container{
@@ -19,3 +46,133 @@ body{
   color: white;
   margin-top: 7%;
 }
+.alert {
+  margin-top: 2%;
+}
+#welcome-container{
+  color:white;
+  text-align: left;
+}
+#creators-container a{
+  color: white;
+}
+#attendances-create-container{
+  width: 100%;
+  height: 10%;
+  background-color: white;
+  color:black;
+  font-weight: 800;
+  font-size:28px;
+}
+.dashboard-container{
+  background-color: rgba(100, 100, 255, 0.35);
+  font-size: 28px;
+  font-weight: 800;
+  text-align: center;
+}
+.dashboard-container a{
+  color:white;
+}
+.dashboard-container a:hover{
+  font-size: 32px;
+  color: lightyellow;
+}
+.attendance-form{
+  color:darkred;
+  font-size: 28px;
+  font-size: 800;
+}
+#logo{
+  font-size: 30px;
+  left: 30px;
+  font-weight: 900;
+  text-decoration: none;
+  color: lightyellow;
+  position: fixed;
+}
+#logo:hover{
+  font-size: 32px;
+}
+#logo-name{
+  color: lightyellow;
+  font-size: 18px;
+  margin-left: 13%;
+  position: fixed;
+  height: 40px;
+  align-items: flex-end;
+  display: flex;
+}
+#index{
+  background-color: rgba(100, 100, 255, 0.35);
+  height: 60vh;
+}
+.creators-name{
+  color: whitesmoke;
+  font-size: 16px;
+  font-weight: 900;
+  text-decoration: underline;
+}
+.creators-name:hover{
+  font-size: 28px;
+}
+.tittle-text{
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 900;
+  font-size: 25px;
+}
+.tabs-container{
+  background-color: rgba(100, 100, 255, 0.35);
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: auto;
+  height: 510px;
+}
+.card-text-d{
+  font-size: 18px;
+  font-weight: 900;
+  color: dodgerblue;
+}
+
+.c-cards{
+  display: flex;
+  overflow-x: scroll !important;
+  height: 620px;
+  margin:0px 20px;
+  justify-content: center;
+}
+.card{
+  margin: 0px 40px;
+}
+#f-friends{
+  color:ghostwhite;
+}
+#selectbox{
+  color:black;
+}
+.boxs{
+  width: max-content;
+}
+.event-container{
+  background-color: rgba(100, 100, 255, 0.35);
+  height: 500px;
+  overflow-y: auto;
+}
+#users{
+  width: max-content;
+  position: relative;
+  margin-left: 41%;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.d-text{
+  color: greenyellow;
+}
+.users-container{
+    background-color: rgba(100, 100, 255, 0.35);
+    margin-top: 0%;
+    height:500px;
+    overflow-y: scroll;
+}
+

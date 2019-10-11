@@ -1,0 +1,26 @@
+<div class="container row">
+            <% current_user.attended_event.past.all.each do |item| %>
+            <div class="card" style="width: 18rem;">
+              <div  class="card-img-top" > <%= gravatar_for current_user %></div>
+              <div class="card-body">
+                <p class="card-text-d">Event</p>
+                <h5 class="card-title">  <%= item.title %></h5>
+                <p class="card-text-d">Description</p>
+                <p class="card-text"><%= item.content %></p>
+                <p class="card-text-d">Location: </p>
+                <p class="card-text"><%= item.location %></p>
+                <p class="card-text-d">Start: </p>
+                <p class="card-text"><%= item.start %></p>
+                <p class="card-text-d">End: </p>
+                <p class="card-text"><%= item.end %></p>
+                <p class="card-text-d">Invited Friends: </p>
+                <ul>
+                  <% item.attendees.each do |invited| %>
+                      <li><%= invited.name %></li>
+                  <% end %>
+                </ul>
+                <%= link_to "View Event", events_path(:e_id => item.id) ,class: "btn btn-primary" %>
+              </div>
+            </div>
+      <% end %>
+</div>

@@ -1,14 +1,15 @@
 <% provide(:title, "Log in") %>
 <div class="login-container">
-  <h1>Create User</h1><div class="row">
+  <h1 class="tittle-text">Create User</h1><div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@user) do |f| %>
+    <%= form_for(@user,url: signup_path) do |f| %>
+        <%= render 'shared/error_messages' %>
         <%= f.label :name %>
-        <%= f.name_field :name, class: 'form-control' %>
+        <%= f.text_field :name, class: 'form-control' %>
         <%= f.label :email %>
-        <%= f.name_field :email, class: 'form-control' %>
+        <%= f.text_field :email, class: 'form-control' %>
         <%= f.submit "Create User", class: "btn btn-primary" %>
-    <% end %>    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+    <% end %>
   </div>
 </div>
 </div>

@@ -1,0 +1,24 @@
+<div id="f-friends" class="container">
+  <div class="tittle-text">INVITE FRIENDS</div>
+  <%= form_for(:attendance, url: event_created_path) do |f| %>
+      <%= f.label :title,'Select Event' %>
+      <br>
+      <div id="selectbox">    <select name="select_list" id="select_list">
+          <% retrieve_events.each do |item| %>
+              <option name="<%= item.id  %>" value="<%= item.id  %>"> <%= item.title %> </option>
+          <% end %>
+        </select>
+      </div>
+      <br>
+      <div class="d-flex flex-wrap container">
+
+          <% retrieve_users_name.each do |item| %>
+            <div class="d-flex boxs">
+              <%= f.check_box :tag_ids,{multiple:true},item.email ,''%> <%= item.name %>
+            </div>
+          <% end %>
+
+      </div>
+      <%= f.submit  "Invite", class: "btn btn-primary" %>
+  <% end %>
+</div>

@@ -1,0 +1,14 @@
+<% provide(:title, @user.name) %>
+<h1>
+  <%= gravatar_for @user %>
+  Welcome <%= @user.name %>!<br>
+  Email: <%= @user.email %>
+</h1>
+<h1>Your Events</h1>
+<% @user.events.each do |event| %>
+  <%= event.title %><br>
+<% end %>
+<h1>Your Invitations</h1>
+<% @user.attended_event.each do |event| %>
+  <%= event.title %><br>
+<% end %>
