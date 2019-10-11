@@ -3,7 +3,6 @@
 require 'test_helper'
 
 class EventsControllerTest < ActionDispatch::IntegrationTest
-
   def setup
     @event = Event.new(title: 'Example', content: 'whatever',
                        start: 'Mon, 30 Sep 2019 22:53:44 UTC +00:00')
@@ -18,7 +17,4 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
     @event.creator_id = @user.id
     assert @event.save
   end
-
-
-
 end

@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 class AttendanceAuthTestTest < ActionDispatch::IntegrationTest
-
   def setup
     @user = User.new(name: 'Example', email: 'example@user.com')
     @user2 = User.new(name: 'Example1', email: 'example1@user.com')
@@ -17,5 +18,4 @@ class AttendanceAuthTestTest < ActionDispatch::IntegrationTest
     @event.attendees << @user2
     assert @event.attendees.include?(@user2)
   end
-
 end
