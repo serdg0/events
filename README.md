@@ -1,48 +1,41 @@
-# Building an Events site
+# Events
 
-### EventBrite clone repository
+The purpose of this project is building an event app with Ruby on Rails. Inspired in the site of [EventBrite](https://www.eventbrite.com/). It let's you invite friends, create events, and attend events.
 
-**Description** 
-Task done as a part of the Microverse Curriculum to work with associations.
+![Selection_004](https://user-images.githubusercontent.com/49207642/80022541-d4063880-84a1-11ea-9906-d3484be488d1.png)
 
-Full description:
+Build entirely with Ruby on Rails.
 
-[Associations](https://www.theodinproject.com/courses/ruby-on-rails/lessons/associations)
+## Built With
+
+- CSS.
+- Ruby on Rails.
+- HTML.
+- Mailers.
+
+## Getting Started
+
+- Clone this repository.
+- In the root folder, open your terminal.
+- Type: `rails s`
+- Open your browser and go to `http://localhost:3000/`
+- Signup with any email and enjoy!
+
+## Authors
+
+👤 Cristian Ines Hernandez A. - MephistoDevelop
+
+[Github](https://github.com/MephistoDevelop) | [Twitter](https://twitter.com/MephistoDevelop) | [Linkedin](https://www.linkedin.com/in/cristian-hernandez1992/) | [Portfolio](https://mephistodevelop.github.io/MephistoDevelop_webpage/public/)
+
+👤 Sergio Diaz
+
+[Github](https://github.com/serdg0) | [Twitter](https://twitter.com/thesergiod) | [Linkedin](https://www.linkedin.com/in/sergiodiaz-dev/) | [Portfolio](https://sergiodev.netlify.com/)
 
 
-## Framework
+## Show your support
 
-Ruby on Rails
+Give a ⭐️ if you like this project!
 
-## GEMS
+## 📝 License
 
-* Rest-Client
-* Bcrypt
-
-## PROTOCOLS
-HTTP
-
-**Coded by**
-
-[MephistoDevelop](https://www.github.com/mephistodevelop)
-
-[Sergio Diaz](https://www.github.com/serdg0)
-
-## Getting started
-To get started with the app, clone the repo and then install the needed gems:
-
-##### $ bundle install --without production
-
-Next, migrate the database:
-
-##### $ rails db:migrate
-
-Finally, run the test suite to verify that everything is working correctly:
-
-##### $ rails test
-
-If the test suite passes, you'll be ready to run the app in a local server:
-
-##### $ rails server
-
-For more information, see the Ruby on Rails Tutorial [book](https://www.railstutorial.org/book/).
+This project is [MIT](lic.url) licensed.
